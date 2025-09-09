@@ -33,23 +33,32 @@ Git für Versionskontrolle
 BookOrderApp/
 │
 ├─ BookOrder/                  # Hauptprojekt
+
 │  ├─ Models/                  # Datenmodelle: Book, Order, OrderBook
+
 │  ├─ Data/                    # DbContext und Factory
+
 │  ├─ Services/                # Business-Logik: OrderService, BookService
+
 │  ├─ Views/                   # Avalonia UI Seiten
+
 │  ├─ App.axaml / App.axaml.cs # Avalonia Startpunkt
+
 │  └─ MainWindow.axaml         # Hauptfenster
-│
+
+│  └─ README.md
+
 ├─ scripts/                    # SQL Skripte zur DB-Erstellung
+
 │  └─ create_db.sql            # Tabellen und Beispiel-Daten
-│
-└─ README.md
+
+└─
 
 ⚙️ Installation
 
 Repository klonen:
 
-git clone https://github.com/dein-benutzername/BookOrderApp.git
+git clone https://github.com/akrft88-tech/BookOrderApp.git
 cd BookOrderApp
 
 
