@@ -1,0 +1,20 @@
+{
+    // Verwenden Sie IntelliSense, um Attribute zu erfahren. 
+    // Zeigen Sie dazu auf vorhandene Attribute, um die Beschreibung anzuzeigen.
+    // Weitere Informationen finden Sie unter: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": ".NET 8 Avalonia App",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/bin/Debug/net8.0/BookOrder.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        }
+    ]
+}

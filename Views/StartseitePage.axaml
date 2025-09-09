@@ -1,0 +1,31 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="BookOrder.Views.StartseitePage">
+
+  <!-- Grid mit drei gleich großen Zeilen -->
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+
+    <!-- Button 1: Bestellungen anzeigen -->
+    <Button Grid.Row="0" Content="📖 Bestellungen anzeigen" Name="BtnOrders"
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+            HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+            FontSize="28"/>
+
+    <!-- Button 2: Neue Bestellung hinzufügen -->
+    <Button Grid.Row="1" Content="➕ Neue Bestellung hinzufügen" Name="BtnAdd"
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+            HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+            FontSize="28"/>
+
+    <!-- Button 3: Bücher verwalten -->
+    <Button Grid.Row="2" Content="📚 Bücher verwalten" Name="BtnBooks"
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+            HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+            FontSize="28"/>
+  </Grid>
+</UserControl>

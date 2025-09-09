@@ -1,0 +1,72 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="BookOrder.Views.AddOrderPage">
+
+  <DockPanel Margin="20">
+    
+    <!-- Titel und Kundendaten -->
+    <StackPanel DockPanel.Dock="Top">
+      <TextBlock Text="Neue Bestellung hinzufügen" 
+                 FontSize="20" FontWeight="Bold" 
+                 HorizontalAlignment="Center"/>
+
+      <!-- Eingabe für Name und Adresse -->
+      <Grid ColumnDefinitions="120,*,120,*" RowDefinitions="Auto,Auto">
+        <TextBlock Text="👤 Name:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="NameBox" Grid.Row="0" Grid.Column="1"/>
+
+        <TextBlock Text="🏠 Adresse:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="AddressBox" Grid.Row="1" Grid.Column="1"/>
+      </Grid>
+    </StackPanel>
+
+    <!-- Hauptbereich: links Liste, rechts Code/Menge -->
+    <Grid DockPanel.Dock="Top" Margin="0,20,0,0" ColumnDefinitions="2*,*,2*">
+      
+      <!-- Liste aller verfügbaren Bücher -->
+      <StackPanel Grid.Column="0">
+        <TextBlock Text="📚 Bücherliste" FontWeight="Bold" Margin="0,0,0,5"/>
+        <ListBox x:Name="BooksList" Height="200" SelectedIndex="0">
+          <ListBox.ItemTemplate>
+            <DataTemplate>
+              <TextBlock Text="{Binding Title}"/>
+            </DataTemplate>
+          </ListBox.ItemTemplate>
+        </ListBox>
+      </StackPanel>
+
+      <!-- Rechts: Eingabe des Buchcodes und Menge -->
+      <StackPanel Grid.Column="2" Spacing="8" Margin="0,20,0,0">
+        <TextBlock Text="🔢 Buchnummer (8-stellig)"/>
+        <TextBox x:Name="BookCodeBox" Width="180"/>
+
+        <TextBlock Text="🔄 Menge"/>
+        <NumericUpDown x:Name="QuantityBox" Minimum="1" Maximum="99" Value="1" Width="100"/>
+
+        <Button x:Name="BtnAddBook" Content="➕ Buch hinzufügen" Width="180"/>
+      </StackPanel>
+    </Grid>
+
+    <!-- Anzeige der Bücher im aktuellen Auftrag -->
+    <StackPanel DockPanel.Dock="Top" Margin="0,20,0,0">
+      <TextBlock Text="📝 Bücher in dieser Bestellung:" FontWeight="Bold" Margin="0,0,0,5"/>
+      <ListBox x:Name="CurrentOrderList" Height="100">
+        <ListBox.ItemTemplate>
+          <DataTemplate>
+            <StackPanel Orientation="Horizontal" Spacing="10">
+              <TextBlock Text="{Binding Book.Title}" Width="200"/>
+              <TextBlock Text="{Binding Quantity}" Width="50"/>
+            </StackPanel>
+          </DataTemplate>
+        </ListBox.ItemTemplate>
+      </ListBox>
+    </StackPanel>
+
+    <!-- Aktionen am unteren Rand -->
+    <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Spacing="10" 
+                HorizontalAlignment="Center" Margin="0,20,0,0">
+      <Button x:Name="BtnSave" Content="💾 Bestellung speichern" Width="200"/>
+      <Button x:Name="BtnBack" Content="⬅ Zurück" Width="120"/>
+    </StackPanel>
+  </DockPanel>
+</UserControl>

@@ -1,0 +1,49 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="BookOrder.Views.OrdersPage">
+
+    <Grid Margin="20" RowDefinitions="Auto,Auto,*">
+
+        <TextBlock Text="Alle Bestellungen" FontSize="20" FontWeight="Bold"
+                   HorizontalAlignment="Center" Grid.Row="0"/>
+
+        <StackPanel Orientation="Horizontal" Spacing="10" Grid.Row="1" Margin="0,10,0,10">
+            <TextBox x:Name="SearchBox" Width="200" Watermark="Name oder Buchtitel"/>
+            <Button x:Name="BtnSearch" Content="Suchen" Width="100"/>
+            <Button x:Name="BtnRefresh" Content="Aktualisieren" Width="120"/>
+            <Button x:Name="BtnBack" Content="⬅ Zurück" Width="120"/>
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+            <ListBox x:Name="OrdersListBox">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="0,5,0,5">
+                            <TextBlock Text="{Binding ReaderName}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding ReaderAddress}" FontStyle="Italic"/>
+
+                            <ItemsControl ItemsSource="{Binding OrderBooks}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Book.Title}" 
+                                                   Margin="20,0,0,0">
+                                            <TextBlock.Text>
+                                                <MultiBinding StringFormat="{}{0} x {1}">
+                                                    <Binding Path="Book.Title"/>
+                                                    <Binding Path="Quantity"/>
+                                                </MultiBinding>
+                                            </TextBlock.Text>
+                                        </TextBlock>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+
+                            <Separator Margin="0,5"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
+

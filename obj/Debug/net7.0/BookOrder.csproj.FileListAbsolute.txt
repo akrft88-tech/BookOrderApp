@@ -1,0 +1,7 @@
+c:\Users\Admin\Documents\GitHub\BookOrderApp\BookOrder\obj\Debug\net7.0\BookOrder.csproj.AssemblyReference.cache
+c:\Users\Admin\Documents\GitHub\BookOrderApp\BookOrder\obj\Debug\net7.0\Avalonia\Resources.Inputs.cache
+c:\Users\Admin\Documents\GitHub\BookOrderApp\BookOrder\obj\Debug\net7.0\Avalonia\resources
+c:\Users\Admin\Documents\GitHub\BookOrderApp\BookOrder\obj\Debug\net7.0\BookOrder.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Admin\Documents\GitHub\BookOrderApp\BookOrder\obj\Debug\net7.0\BookOrder.AssemblyInfoInputs.cache
+c:\Users\Admin\Documents\GitHub\BookOrderApp\BookOrder\obj\Debug\net7.0\BookOrder.AssemblyInfo.cs
+c:\Users\Admin\Documents\GitHub\BookOrderApp\BookOrder\obj\Debug\net7.0\BookOrder.csproj.CoreCompileInputs.cache
